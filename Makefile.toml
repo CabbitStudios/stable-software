@@ -1,0 +1,29 @@
+[tasks.format]
+description = "Run rustfmt"
+install_crate = "rustfmt"
+command = "cargo"
+args = ["fmt"]
+
+
+[tasks.watch-rust]
+script = ["cargo run | bunyan"]
+watch = { why = true, watch = ["./src/"] }
+
+[tasks.copy-fonts]
+script_runner = "@shell"
+script = [
+    "cp \"./assets/fonts/*.ttf\" ./public/",
+]
+
+[tasks.copy-images]
+script_runner = "@shell"
+script = [
+    "mkdir ./public/images",
+    "cp \"./assets/images/*\" ./public/images/",
+]
+
+[tasks.watch-assets]
+dependencies = ["copy-fonts", "copy-images"]
+script = ["npm run buildSass"]
+watch = { why = true, watch = ["./assets/"] }
+

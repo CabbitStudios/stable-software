@@ -1,0 +1,36 @@
+@import "bulma";
+
+@font-face {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("/public/Inter-Regular.ttf");
+}
+
+.aside {
+    background-color: #eee;
+    border-right: #ccc 1px solid;
+}
+
+.avatar {
+    border: 1px solid #aaa;
+    box-shadow: inset 0 0 0 1px #fff;
+    overflow: hidden;
+}
+
+.aside-info {
+    display: flex;
+    padding: 0.5rem 1rem;
+    flex-direction: column;
+}
+
+.aside-center {
+    align-self: center;
+}
+
+.is-fullheight-desktop {
+    @include desktop {
+        min-height: calc(100vh - #{$navbar-height})
+    }
+}

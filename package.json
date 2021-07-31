@@ -1,0 +1,27 @@
+{
+  "name": "stable-software",
+  "version": "1.0.0",
+  "description": "🐴Stable Software🦄\r ====================",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "buildSass": "sass ./assets/scss/style.scss ./public/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CabbitStudios/stable-software.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CabbitStudios/stable-software/issues"
+  },
+  "homepage": "https://github.com/CabbitStudios/stable-software#readme",
+  "private": true,
+  "dependencies": {
+    "bulma": "^0.9.3"
+  },
+  "devDependencies": {
+    "sass": "^1.36.0"
+  }
+}
